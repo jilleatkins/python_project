@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1><span style="font-family: 'Permanent Marker', cursive; font-size: 55px; color:#e5bb50; text-shadow: 3px 3px #b98c1b">Golden Basket</span></h1>
+<br>
+<h2><strong>Manage suppliers</strong></h2>
+
+<body>
+<form action="/suppliers/{{supplier.id}}" method="POST">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Supplier name" required>
+  </div>
+
+<br>
+
+  <div>
+    <label for="contact_no">Contact details:</label>
+    <input type="text" id="contact_details" name="contact_details" placeholder="Supplier contact details" required>
+  </div>
+<br>
+  <input class="delete" type="submit" value="Update Supplier"/>
+</form>
+<br>
+<form action="/suppliers/{{ supplier.id }}/delete" method="POST">
+  <input class="delete" type="submit" value="Remove Supplier"/>
+</form>
+<br>
+<a href="/">Back to homepage</a>
+</body>
+{% endblock %}

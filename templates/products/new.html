@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1><span style="font-family: 'Permanent Marker', cursive; font-size: 55px; color:#e5bb50; text-shadow: 3px 3px #b98c1b">Golden Basket</span></h1>
+
+<h2>Add new product</h2>
+<body>
+<form class="form" action="/products" method="POST">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Product Name" required>
+  </div>
+  <br>
+  <div>
+    <label for="supplier">Select supplier:</label>
+    <select id="supplier" name="supplier_id">
+        {% for supplier in all_suppliers %}
+        <option value="{{ supplier.id }}">{{ supplier.name }}</option>
+        {% endfor %}
+    </select>
+</div>
+<br>
+  <div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" placeholder="Product Description" required autofocus>
+  </div>
+  <br>
+  <div>
+    <label for="stock_quantity">Stock Qty.:</label>
+    <input type="text" id="stock_quantity" name="stock_quantity" placeholder="Qty." required>
+  </div>
+  <br>
+  <div>
+    <label for="buying_price">Buy Price (£):</label>
+    <input type="text" id="buying_price" name="buying_price" placeholder="e.g. £1.50" required>
+  </div>
+  <br>
+  <div>
+    <label for="selling_price">Sell Price (£):</label>
+    <input type="text" id="selling_price" name="selling_price" placeholder="e.g. £2.50" required>
+  </div>
+  <br>
+  <button type="submit">Add New Product</button>
+</form>
+<br>
+<a href="/" class="back">Back to homepage</a>
+</body>
+
+{% endblock %}

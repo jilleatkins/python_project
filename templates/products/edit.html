@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1><span style="font-family: 'Permanent Marker', cursive; font-size: 55px; color:#e5bb50; text-shadow: 3px 3px #b98c1b">Golden Basket</span></h1>
+
+<h2><strong>Manage products</strong></h2>
+
+<body>
+<form action="/products/{{product.id}}" method="post">
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" value="{{product.name}}" required>
+  </div>
+
+<br>
+
+  <div>
+    <label for="supplier">Select supplier:</label>
+    <select id="supplier" name="supplier_id">
+      {% for supplier in all_suppliers %}
+        <option value="{{ supplier.id }}"
+          {% if product.supplier.id == supplier.id %} selected="selected"{% endif %}>
+          {{ supplier.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+<br>
+
+  <div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" value="{{product.description}}" required>
+  </div>
+
+<br>
+
+  <div>
+    <label for="stock_quantity">Stock Qty:</label>
+    <input type="text" id="stock_quantity" name="stock_quantity" value="{{product.stock_quantity}}" required>
+  </div>
+
+<br>
+
+  <div>
+    <label for="buying_price">Buy Price (£):</label>
+    <input type="text" id="buying_price" name="buying_price" value="{{product.buying_price}}" required>
+  </div>
+
+<br>
+
+  <div>
+    <label for="selling_price">Sell Price (£):</label>
+    <input type="text" id="selling_price" name="selling_price" value="{{product.selling_price}}" required>
+  </div>
+
+<br>
+
+  <input class="update" type="submit" value="Update Product" />
+</form>
+
+<br>
+
+<form action="/products/{{ product.id }}/delete" method="POST">
+  <input class="delete" type="submit" value="Delete Product" />
+</form>
+<br>
+<a href="/">Back to homepage</a>
+</body>
+{% endblock %}

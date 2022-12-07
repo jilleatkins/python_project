@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1><span style="font-family: 'Permanent Marker', cursive; font-size: 55px; color:#e5bb50; text-shadow: 3px 3px #b98c1b">Golden Basket</span></h1>
+
+<br>
+
+<h2><strong>Manage suppliers</strong></h2>
+
+<br>
+<body>
+{% for supplier in all_suppliers %}
+  <div class="supplier">
+    <div class="content">
+      <a href="/suppliers/{{supplier.id}}/edit" class="edit"><strong>{{supplier.name}}</strong></a>
+      <div class="name">
+        {{supplier.description}}
+      </div>
+    </div>
+  </div>
+  <a href="/suppliers/{{supplier.id}}/edit" class="edit">Edit Supplier</a>
+<br>
+<br>
+{% endfor %}
+<br>
+<a href="/" class="back">Back to homepage</a>
+</body>
+{% endblock %}

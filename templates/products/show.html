@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="product">
+  <div class="content">
+    <strong>{{product.supplier.name}}</strong>
+  </div>
+    <a href="/products/{{product.id}}" class="product-list">{{product.name}}</a>
+    <div class="name">
+      <i>{{product.description}}</i>
+      {% if product.stock_quantity == 2 %}
+      <br>
+      <span><strong><i class="fa fa-solid fa-exclamation" style="color: darkorange; font-size: 20px"></i> LOW STOCK</strong></span>
+      {% endif %}
+      {% if product.stock_quantity == 0 %}
+      <br>
+      <span><strong><i class="fa fa-solid fa-exclamation" style="color: red; font-size: 20px"></i> OUT OF STOCK</strong></span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<a href="/products/{{product.id}}/edit" class="edit">Edit Product</a>
+<div>
+<br>
+</div>
+
+{% endblock %}

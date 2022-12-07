@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Permanent+Marker&display=swap');
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  color: black;
+  text-align: center;
+  padding-top: 5px;
+  line-height: 10%;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  color: black;
+  margin-left: 25px;
+  text-align: center;
+  padding-top: 5px;
+  line-height: 80%;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: rgb(96, 96, 96);
+  text-align: center;
+  line-height: 50%;
+}
+  
+.topnav {
+  position: fixed;
+  top: 0;
+  padding: 8px;
+  font-size: 24px;
+  background-color: #db7e26c5;
+  width: 100%;
+  z-index: 1;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.menu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  list-style: none;
+  line-height: 130%;
+  text-align: center;
+  font-size: 18px;
+  background-color: #fbf6e8;
+  border: 1px grey;
+  border-radius: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  box-shadow: 5px 5px 10px  #d2d2d279;
+}
+
+form {
+  font-family: 'Montserrat';
+  margin-left: 50px;
+}
+
+.admin-list {
+  display: grid;
+  grid-template-rows: 200px 200px;
+  grid-template-columns: 200px 200px;
+  gap: 30px;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card1, .card2, .card3, .card4 {
+  border-radius: 12px;
+  display: inline-flex;
+  background-position: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.card1:hover {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);  
+  background-image: url("/static/images/3-bags.png");
+  background-size: contain;
+  opacity: 0.6;
+  padding: 16px;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.card2:hover {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);  
+  background-image: url("/static/images/fudge.png");
+  background-size: contain;
+  background-position: center;
+  opacity: 0.6;
+  padding: 16px;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.card3:hover {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);  
+  background-image: url("/static/images/manage-suppliers.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  padding: 16px;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.card4:hover {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);  
+  background-image: url("/static/images/new-supplier.jpg");
+  background-size: cover;
+  opacity: 0.6;
+  padding: 16px;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+a:link {
+  color: gray;
+  text-decoration: none;
+}
+
+.product-list {
+  align-content: auto;
+}
+
+.edit {
+  margin-left: 50px;
+}
+
+.edit:hover {
+  color: goldenrod;
+}
+
+.supplier {
+  align-content: auto;
+}
+
+.back {
+  margin-left: 50px;
+}
+
+.back:hover {
+  color: goldenrod;
+}
+
+a:visited {
+  color: gray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+a:active {
+  color: goldenrod;
+  text-decoration: underline;
+}
+
+.product {
+  margin-left: 50px;
+}
+
+.footer {
+  text-align: center;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 90px;
+  background-color: goldenrod;
+}
+  
