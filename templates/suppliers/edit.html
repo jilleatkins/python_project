@@ -10,7 +10,7 @@
 <form action="/suppliers/{{supplier.id}}" method="POST">
   <div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Supplier name" required>
+    <input type="text" id="name" name="name" value="{{supplier.name}}" placeholder="Supplier name" required>
   </div>
 
 <br>
@@ -19,14 +19,16 @@
     <label for="contact_no">Contact details:</label>
     <input type="text" id="contact_details" name="contact_details" placeholder="Supplier contact details" required>
   </div>
-<br>
-  <input class="delete" type="submit" value="Update Supplier"/>
+<p><i> Note: You cannot <strong>remove</strong> a supplier without first removing its associated products</i></p>
+  <input class="button" type="submit" value="Update Supplier"/>
 </form>
 <br>
 <form action="/suppliers/{{ supplier.id }}/delete" method="POST">
-  <input class="delete" type="submit" value="Remove Supplier"/>
+  <input class="button" type="submit" value="Remove Supplier"/>
 </form>
 <br>
-<a href="/">Back to homepage</a>
+<a href="/suppliers" class="back-suppliers">Back to suppliers</a>
+<br>
+<a href="/" class="back-homepage">Back to home</a>
 </body>
 {% endblock %}

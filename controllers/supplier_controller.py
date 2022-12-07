@@ -48,5 +48,6 @@ def edit_supplier(supplier_id):
 
 @supplier_blueprint.route('/suppliers/<supplier_id>/delete', methods=['POST'])
 def remove_supplier(supplier_id):
+    # pdb.set_trace()
     supplier_repository.delete(supplier_id)
     return redirect('/suppliers')
