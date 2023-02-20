@@ -11,7 +11,6 @@ def save(product):
     results = run_sql(sql, values)
     id = results[0]['id']
     product.id = id
-    # breakpoint()
     return product
 
 
@@ -39,6 +38,12 @@ def select(id):
         supplier = supplier_repository.select(result['supplier_id'])
         product = Product(result['name'], supplier, result['description'], result['stock_quantity'], result['buying_price'], result['selling_price'], result['id'])
     return product
+
+
+def sort_alphabetically():
+    products = select_all()
+    products.sort(key=lambda x: x.name)
+    return products
 
 
 def delete_all():
